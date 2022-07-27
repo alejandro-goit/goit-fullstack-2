@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contacts.css" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contact</h1>
+    <form id="contacto-form" name="contacto">
+        <label for="correo-id">
+            Correo:
+            <input id="correo-id" type="email" name="correo" placeholder="Ej: alejandro@gmail.com" autofocus required/>
+        </label>
+        <label>
+            Contraseña:
+            <input type="password" name="password" minlength="5" maxlength="20"/>
+        </label>
+        <p>Tipo de servicio</p>
+        <label>
+            A:
+            <input type="radio" name="servicio" value="A" checked />
+        </label>
+        <label>
+            B:
+            <input type="radio" name="servicio" value="B" />
+        </label>
+        <label>
+            Telefono:
+            <input type="number" name="telefono" min="5"/>
+        </label>
+        <label>
+            Fecha nacimiento:
+            <input type="datetime-local" name="date" />
+        </label>
+        <label for="size">Size:</label>
+        <select id="size" name="size">
+            <option value="xs">Extra Small</option>
+            <option value="s">Small</option>
+            <option value="m" selected>Medium</option>
+            <option value="l">Large</option>
+        </select>
+
+        <button type="submit"> OTRA COSA </button>
+    </form>
+</body>
+</html>

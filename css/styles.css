@@ -15,10 +15,12 @@ body {
 
 .enlaces-aside {
     color: #303030;
+    text-decoration: none;
 }
 
 .enlaces {
     color: white;
+    text-decoration: none;
 }
 
 .enlaces:hover, .enlaces-aside:hover {
@@ -28,6 +30,10 @@ body {
 aside {
     background-color: white;
     padding: 10px;
+}
+
+aside * {
+    position: sticky;
 }
 
 #seccion-principal {
@@ -42,13 +48,16 @@ aside {
 }
 
 #seccion-principal > header {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
     display: inline;
-    margin-right: 150px;
 }
 
 .contactos {

@@ -1,0 +1,16 @@
+#contacto-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#correo-id:disabled {
+    background-color: gray;
+}
+
+input[type="number"]:out-of-range {
+   border: 2px solid red;
+}
+
+input[type="number"]:in-range {
+    border: 2px solid green;
+ }
