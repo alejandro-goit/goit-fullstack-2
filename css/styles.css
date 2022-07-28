@@ -6,37 +6,31 @@
     --fuente-gris: #9DA4BD;
 }
 
-body {
+/* Body */
+
+.contenido {
     padding: 0;
     margin: 0;
     background-color: grey;
     display: flex;
 }
 
-.enlaces-aside {
-    color: #303030;
-    text-decoration: none;
-}
+/* Barra lateral */
 
-.enlaces {
-    color: white;
-    text-decoration: none;
-}
-
-.enlaces:hover, .enlaces-aside:hover {
-    color: var(--color-secundario);
-}
-
-aside {
+.barra-lateral {
     background-color: white;
     padding: 10px;
 }
 
-aside * {
-    position: sticky;
+.barra-lateral__enlace {
+    display: block;
+    color: #303030;
+    text-decoration: none;
 }
 
-#seccion-principal {
+/* Contenido principal */
+
+.seccion-principal {
     display: block;
     background-image: url("/imagenes/main-bg.jpg");
     background-position: center;
@@ -47,7 +41,7 @@ aside * {
     padding: 40px;
 }
 
-#seccion-principal > header {
+.header-principal {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -56,41 +50,51 @@ aside * {
     top: 0;
 }
 
-.navbar {
+.navbar-principal {
     display: inline;
 }
 
-.contactos {
+.contactos-principal {
     display: inline;
 }
 
-aside > a {
-    display: block;
-}
-
-.button-service {
+.contactos-principal__button-service {
     color: white;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid var(--color-secundario);
     border-radius: 25px;
+    padding: 5px;
 }
 
-.button-service:hover {
+.contactos-principal__button-service:hover {
     background-color: var(--color-secundario);
     border: 1px solid white;
 }
 
-h1 {
+/* Propiedades compartidas */
+
+.navbar-principal__enlace, .contactos-principal__enalce {
     color: white;
-    font-size: 65px;
-    letter-spacing: 1px;
-    font-family: "Raleway";
+    text-decoration: none;
 }
 
-#main-content {
+.barra-lateral__enlace:hover, .navbar-principal__enlace:hover,
+.contactos-principal__enalce:hover {
+    color: var(--color-secundario);
+}
+
+/* Contenido principal */
+
+.contenido-principal {
     color: var(--fuente-gris);
     font-family: "Open Sans";
     line-height: 20px;
     letter-spacing: 0.5px;
 }
 
+.contenido-principal__titulo {
+    color: white;
+    font-size: 65px;
+    letter-spacing: 1px;
+    font-family: "Raleway";
+}
