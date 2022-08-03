@@ -1,0 +1,52 @@
+@import 'import.scss';
+
+$color-primario: #ffff;
+
+// .button {
+//     border-radius: 3px;
+//     font-size: 16px;
+//     padding: 10px 20px;
+//     color: white;
+//     background-color: gray;
+// }
+
+// .button-success {
+//     @extend .button;
+//     background-color: green;
+// }
+
+// .button-error {
+//     @extend .button;
+//     background-color: red;
+// }
+
+// Ejemplo con mixin
+
+@mixin miBoton($fondo, $colorLetra) {
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: $fondo;
+    color: $colorLetra;
+}
+
+.button-success {
+    @include miBoton(green, white);
+}
+
+.contendor {
+    background-color: map-get($colores, 'colorPrimario');
+    padding: 5px;
+
+    .imagen {
+        border: 2px solid black;
+    }
+
+    &:hover {
+        background-color: green;
+    }
+
+    &__imagen {
+        border: map-get($tamanos, 'border') solid black;
+    }
+}
